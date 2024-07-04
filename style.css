@@ -1,0 +1,127 @@
+:root {
+  --clr-primary-400: hsl(var(--clr-primary-400-hsl));
+  --clr-primary-400-hsl: 4, 100%, 67%;
+  --clr-neutral-100: hsl(var(--clr-neutral-100-hsl));
+  --clr-neutral-100-hsl: 0, 0%, 100%;
+  --clr-neutral-400: hsl(var(--clr-neutral-400-hsl));
+  --clr-neutral-400-hsl: 231, 7%, 60%;
+  --clr-neutral-600: hsl(var(--clr-neutral-600-hsl));
+  --clr-neutral-600-hsl: 235, 18%, 26%;
+  --clr-neutral-700: hsl(var(--clr-neutral-700-hsl));
+  --clr-neutral-700-hsl: 234, 29%, 20%;
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 2.5rem;
+}
+@media (min-width: 60rem) {
+  :root {
+    --fs-500: 3.5rem;
+  }
+}
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 58rem);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: var(--gap, 1rem);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* purgecss ignore */
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.text-primary-400 {
+  color: hsl(4, 100%, 67%);
+}
+
+.bg-primary-400 {
+  color: hsl(4, 100%, 67%);
+}
+
+.text-neutral-100 {
+  color: hsl(0, 0%, 100%);
+}
+
+.bg-neutral-100 {
+  color: hsl(0, 0%, 100%);
+}
+
+.text-neutral-400 {
+  color: hsl(231, 7%, 60%);
+}
+
+.bg-neutral-400 {
+  color: hsl(231, 7%, 60%);
+}
+
+.text-neutral-600 {
+  color: hsl(235, 18%, 26%);
+}
+
+.bg-neutral-600 {
+  color: hsl(235, 18%, 26%);
+}
+
+.text-neutral-700 {
+  color: hsl(234, 29%, 20%);
+}
+
+.bg-neutral-700 {
+  color: hsl(234, 29%, 20%);
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
