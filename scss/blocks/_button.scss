@@ -1,0 +1,24 @@
+.button {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  background: linear-gradient(
+    var(--clr-neutral-700),
+    var(--clr-neutral-700),
+    var(--clr-primary-400),
+    #ff527b
+  );
+  background-size: 0.1rem 10rem;
+  background-position: top;
+  color: var(--clr-neutral-100);
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    background-position: bottom;
+    box-shadow: 0px 16px 32px hsla(var(--clr-primary-400-hsl), 0.5);
+  }
+}

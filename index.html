@@ -46,7 +46,7 @@
               alt="A simple illustration of a desktop screen, a webpage, and two graphs with an orange background. " />
           </picture>
         </div>
-        <div class="[ form_content ]">
+        <div class="[ form__content ] [ flow ]">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
@@ -56,6 +56,7 @@
           </ul>
           <form
             id="form"
+            class="[ form__form ] [ flow ]"
             novalidate>
             <div>
               <label for="email">Email address</label>
@@ -68,20 +69,22 @@
                 aria-live="polite"
                 id="email-error"></span>
             </div>
-            <button>Subscribe to monthly newsletter</button>
+            <button class="[ button ]">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </div>
-      <div class="[ success ]">
-        <img
-          src="./assets/images/icon-success.svg"
-          alt="" />
-        <h1>Thanks for subscribing!</h1>
-        <p>
-          A confirmation email has been sent to <strong></strong>. Please open
-          it and click the button inside to confirm your subscription.
-        </p>
-        <button>Dismiss message</button>
+      <div class="[ success ] [ flow ]">
+        <div class="[ success__message ] [ flow ]">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt="" />
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <strong></strong>. Please open
+            it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button class="[ button ]">Dismiss message</button>
       </div>
     </main>
 
