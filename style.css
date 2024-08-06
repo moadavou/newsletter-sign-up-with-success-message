@@ -98,7 +98,7 @@ li {
 }
 
 li::before {
-  content: url("../../assets/images/icon-list.svg");
+  content: url("./assets/images/icon-list.svg");
   display: inline-block;
   width: var(--marker-size);
   height: var(--marker-size);
