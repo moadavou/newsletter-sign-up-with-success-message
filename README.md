@@ -78,7 +78,15 @@ When the project is ready for deployment, run `npm run build` to compile the scs
 
 ### What I learned
 
+This was my first time creating a form from scratch. I learned a lot, including how to create and validate forms, basic form managing in JavaScript, and ARIA attributes that can be good to use with forms.
+
+At first, I tried to create the success message using a simple `<div>` and `position: absolute`. But then I remembered the `<dialog>` element. This approach made me write less code due to the functions, included in the `<dialog>` element. It also made managing the success message easier.
+
+I learned that I can use `aria-describedby` to get screen readers to read error messages and that I need to use `aria-required` for required form fields.
+
 ### Continued development
+
+I have to work more with forms to become more comfortable with them. I had to look up a lot since I'm still very new to them and JavaScript. Writing the code is a slow process, and it requires a lot of information lookup. However, I'm getting better each day.
 
 ## Author
 
