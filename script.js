@@ -25,6 +25,7 @@ function handleFormSubmit(e) {
   } else {
     successMsg.showModal();
     successEmail.innerText = email;
+    successMsg.focus();
   }
 }
 
