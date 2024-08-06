@@ -90,12 +90,19 @@ li {
   --marker-size: 21px;
   margin-left: var(--marker-size);
   padding-left: 1rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-li::marker {
+li::before {
   content: url("../../assets/images/icon-list.svg");
+  display: inline-block;
   width: var(--marker-size);
-  aspect-ratio: 1;
+  height: var(--marker-size);
+  margin-right: 1rem;
 }
 
 body {
@@ -193,7 +200,7 @@ h1 {
   font-weight: 700;
   padding: 1rem;
   border-radius: 8px;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .button:hover, .button:focus-visible {
   background-position: bottom;
@@ -234,6 +241,10 @@ h1 {
   width: 100%;
 }
 
+.form__form div {
+  position: relative;
+}
+
 .form__form label {
   font-weight: 700;
   font-size: var(--fs-300);
@@ -246,17 +257,32 @@ h1 {
   padding: 1rem 1.5rem;
   border: 1px solid hsl(0, 0%, 85%);
   border-radius: 8px;
+}
+.form__form input::placeholder {
   color: hsla(var(--clr-neutral-700-hsl), 0.5);
+}
+.form__form input.error {
+  border: 1px solid var(--clr-primary-400);
+  background-color: hsla(var(--clr-primary-400-hsl), 0.15);
+  color: var(--clr-primary-400);
+}
+
+dialog[open] {
+  display: grid;
 }
 
 .success {
-  display: grid;
   align-content: space-between;
   min-height: 100vh;
-  top: 0;
-  left: 0;
+  place-self: center;
   background-color: var(--clr-neutral-100);
   padding: 2.5rem 1rem;
+  max-width: initial;
+  max-height: initial;
+  border: none;
+}
+.success::backdrop {
+  background-color: var(--clr-neutral-700);
 }
 .success button {
   --flow-space: 2.5rem;
@@ -281,4 +307,12 @@ h1 {
 }
 .success__message h1 {
   --flow-space: 2.5rem;
+}
+
+.error-message {
+  position: absolute;
+  right: 0;
+  color: var(--clr-primary-400);
+  font-weight: 700;
+  font-size: var(--fs-300);
 }

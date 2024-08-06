@@ -34,6 +34,10 @@
   }
 }
 
+.form__form div {
+  position: relative;
+}
+
 .form__form label {
   font-weight: 700;
   font-size: var(--fs-300);
@@ -46,18 +50,35 @@
   padding: 1rem 1.5rem;
   border: 1px solid hsl(0, 0, 85%);
   border-radius: 8px;
-  color: hsla(var(--clr-neutral-700-hsl), 0.5);
+
+  &::placeholder {
+    color: hsla(var(--clr-neutral-700-hsl), 0.5);
+  }
+
+  &.error {
+    border: 1px solid var(--clr-primary-400);
+    background-color: hsla(var(--clr-primary-400-hsl), 0.15);
+    color: var(--clr-primary-400);
+  }
+}
+
+dialog[open] {
+  display: grid;
 }
 
 .success {
-  // position: absolute;
-  display: grid;
   align-content: space-between;
   min-height: 100vh;
-  top: 0;
-  left: 0;
+  place-self: center;
   background-color: var(--clr-neutral-100);
   padding: 2.5rem 1rem;
+  max-width: initial;
+  max-height: initial;
+  border: none;
+
+  &::backdrop {
+    background-color: var(--clr-neutral-700);
+  }
 
   button {
     --flow-space: 2.5rem;
@@ -82,4 +103,12 @@
   h1 {
     --flow-space: 2.5rem;
   }
+}
+
+.error-message {
+  position: absolute;
+  right: 0;
+  color: var(--clr-primary-400);
+  font-weight: 700;
+  font-size: var(--fs-300);
 }

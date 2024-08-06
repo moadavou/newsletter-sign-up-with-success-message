@@ -28,10 +28,17 @@ li {
 
   margin-left: var(--marker-size);
   padding-left: 1rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-li::marker {
+li::before {
   content: url('../../assets/images/icon-list.svg');
+  display: inline-block;
   width: var(--marker-size);
-  aspect-ratio: 1;
+  height: var(--marker-size);
+  margin-right: 1rem;
 }
